@@ -1,81 +1,98 @@
 <?php
-echo "<h1>Hello World</h1>";
 
-echo "hi";
-
+echo "<h1>Hello World</h1>\n";
 $greetings = "Hello World";
-$_Variable = "anc";
-
 
 echo $greetings;
+
 $add = 1 + 2;
-$subtraction = 3 - 1;
+$substraction = 3 - 1;
 $power = 2 ** 3;
-$mod = 10 & 2;
+$mod = 10 % 2;
 
-$firstName = "Joey";
-$lastName = 'Johnson';
+$firstname = "Jos";
+$lastname = "Buttler";
 
-$fullname = "<p>$firstName $lastName</p>";
+$fullname = "<p>$firstname $lastname</p>";
+echo $fullname;
 
-echo "$fullname\n";
-
-$quote = " \"Books,like friends should be few but well chosen\" ";
-
+$quote = "\"Books, like friends should be few but well chosen\" ";
 echo $quote;
 
-$fullname = $firstName . $lastName;
+$fullname = $firstname . $lastname;
+echo $fullname;
+
 $one = 1;
 $two = 2;
-
-var_dump($one = $two);
-
-var_dump($one < $two);
+var_dump($one == $two);
 var_dump($one > $two);
+var_dump($one < $two);
 var_dump($one >= $two);
 var_dump($one <= $two);
 
+//if condn
+$animal = "cow";
 
-echo $one = $two;
-
-//IF Conditions
-$animal = "Cow";
-if ($animal = "Cow") {
-    echo "Mooo....";
-} else if ($animal = "Dog") {
-    echo "Woof....";
+if ($animal == "cow") {
+    echo "Mooo...";
+} else if ($animal == "dog") {
+    echo "woof...";
 } else {
-    echo "Iam not an animal";
+    echo "I am not an animal";
 }
 
-//Switch Statement
 
-$food = "applies";
+//switch statement
+$food = "apples";
 switch ($food) {
-    case "apples":
+    case "apples";
         echo "Eating an apple";
         break;
-    case "Oranges":
+    case "oranges";
         echo "Eating an oranges";
         break;
     default:
-        echo "No food.I'm hungry";
-        break;
+        echo "No food .I'm hungry";
 }
 
-
-//While Loop
+//while loop 
 $num = 5;
 while ($num > 0) {
-    echo "while loop $num \n";
+    echo "while loop $num\n";
     $num--;
 }
 
-//For lOOP
+//for loop
 for ($i = 0; $i < 5; $i++) {
-    echo "Far loop $i\n";
+    echo "for loop $i\n";
 }
 
-//Array
-$fruits = ["Äpples", "Oranges", "Berries"];
+//array
+$fruits = ["apples", "oranges", "berries"];
+echo $fruits[2];
+$fruits[] = "pineapple";
+var_dump($fruits);
+
+foreach ($fruits as $fruits) {
+    echo $fruits;
+}
+
+$vehicles = [
+    'brand' => "Maruti",
+    "color" => "Red",
+];
+echo $vehicles['brand'];
+echo $vehicles['color'];
+
+function helloworld()
+{
+    echo "Hello World";
+}
+
+$add = function ($a, $b) {
+    return $a + $b;
+};
+
+echo $add(5, 2);
+helloworld();
 ?>
